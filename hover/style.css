@@ -1,0 +1,188 @@
+  @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Rubik+Vinyl&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        body
+        {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            font-family: 'Belanosima', sans-serif;
+           
+        }
+        a
+        {
+            margin: auto;
+            text-decoration: none;
+        }
+        .spectacledcoder-card1
+        {
+            display: flex;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+            border-radius: 15px;
+            transition: all 2s;
+            align-items: start;
+            justify-content: right;
+            font-family: "Grand Hotel", cursive;
+        }
+        .spectacledcoder-card2
+        {
+            display: flex;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+            border-radius: 15px;
+            transition: all 2s;
+            align-items: start;
+            justify-content: center;
+            font-family: 'Belanosima', sans-serif;
+        }
+        .spectacledcoder-card3
+        {
+            display: flex;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237);
+            border-radius: 15px;
+            transition: all 2s;
+            align-items: end;
+            justify-content: left;
+            font-family: "Kaushan Script", cursive;
+        }
+        .circle1
+        {
+            position: absolute;
+            margin: auto;
+            margin-right: 0px;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+            border-radius: 0px 15px 0px 50px;
+            transition: all 0.5s;
+            
+        }
+        .spectacledcoder-card1:hover .circle1
+        {
+
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            transition: all 0.5s;
+        }
+        .spectacledcoder-card1:hover .content
+        {
+            color: white;
+        }
+        .circle2
+        {
+            position: absolute;
+            margin: auto;
+            margin-top: 35px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(42, 42, 42);
+            border-radius: 50%;
+            transition: all 0.5s;
+            
+        }
+        .spectacledcoder-card2:hover .circle2
+        {
+            margin-top: 0px;
+            background-color: rgb(42, 42, 42);
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            transition: all 0.5s;
+        }
+        .spectacledcoder-card2:hover .content
+        {
+            color: white;
+        }
+        .circle3
+        {
+            position: absolute;
+            margin: auto;
+            margin-top: 35px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 201, 201);
+            border-radius: 0px 50px 0px 15px;
+            transition: all 0.5s;
+            
+        }
+        .spectacledcoder-card3:hover .circle3
+        {
+            margin-top: 0px;
+            background-color: rgb(255, 201, 201);
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            transition: all 0.5s;
+        }
+        .content
+        {
+            margin: auto;
+            z-index: 100;
+            color: black;
+            font-weight: 500;
+        }
+        @media only screen and (max-width: 600px) 
+        {
+            body
+            {
+                flex-direction: column;
+            }
+        }
+        .spectacledcoder-card1 img
+        {
+            position: absolute;
+            margin: auto;
+            padding-top: 8px;
+            padding-right: 8px;
+        }
+        .spectacledcoder-card2 img
+        {
+            position: absolute;
+            margin: auto;
+            margin-top: 35px;
+            padding-top: 12px;
+        }
+        .spectacledcoder-card3 img
+        {
+            position: absolute;
+            margin: auto;
+            padding-left: 8px;
+            padding-bottom: 8px;
+        }
+        .disclaimer
+        {
+            position: absolute;
+            bottom: 0px; 
+            left: 0; 
+            margin-left: auto; 
+            right: 0; 
+            margin-right: auto; 
+            width: fit-content;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .disclaimer a
+        {
+            text-decoration: none;
+            color: #202020;
+            font-weight: 900;
+        }
+        .disclaimer a:hover
+        {
+            text-decoration: overline;
+        }

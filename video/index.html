@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Video Demo</title>
+  <style>
+    body{display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#111;color:#fff;font-family:system-ui,Segoe UI,Arial}
+    .container{max-width:900px;width:100%;padding:20px;box-sizing:border-box}
+    video{width:100%;height:auto;border-radius:8px;background:#000;display:block}
+    .controls{margin-top:8px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+    button{background:#1f6feb;border:none;color:#fff;padding:8px 12px;border-radius:6px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Local video playback</h1>
+    <video id="player" controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video element.
+    </video>
+    <div class="controls">
+      <div>
+        <button id="playPause">Play / Pause</button>
+        <button id="muteToggle">Mute / Unmute</button>
+      </div>
+      <a href="video.mp4" download style="color:#9bd">Download original file</a>
+    </div>
+  </div>
+  <script>
+    const vid = document.getElementById('player');
+    document.getElementById('playPause').addEventListener('click', () => vid.paused ? vid.play() : vid.pause());
+    document.getElementById('muteToggle').addEventListener('click', () => vid.muted = !vid.muted);
+  </script>
+</body>
+</html>

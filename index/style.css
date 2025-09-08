@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+color: #333;
+background: url(images/anime.jpg);
+background-size: cover;
+background-position: 0%;
+background-size: cover;
+}
+.container{
+    margin: 0 15px;
+}
+ .form-box{
+    width: 250px;
+    max-width: 500px;
+    padding: 30px;
+    background: #fff
+ }
+ .form-box :hover{
+    
+ }

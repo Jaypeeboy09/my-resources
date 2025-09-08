@@ -1,0 +1,13 @@
+/* styles.css */
+:root { --accent: #2563eb; --bg: #0b1220; --ink: #e5e7eb; 
+}
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; }
+
+.container { max-width: 720px; margin: 3rem auto; padding: 0 1rem; 
+}
+button { background: var(--accent); color: white; border: 0; padding: 0.7rem 1rem; border-radius: 8px; cursor: pointer; }
+
+button:hover { filter: brightness(1.05); 
+}
+pre { background: #0f172a; padding: 1rem; border-radius: 8px; overflow: auto;
+ }

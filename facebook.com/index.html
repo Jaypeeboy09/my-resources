@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Facebook — Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#">facebook</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Help</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="open-login" class="btn ghost">Log In</button>
+        <button id="open-signup" class="btn primary">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Connect with friends and the world around you.</h1>
+        <p>See photos and updates, join communities, and stay in touch.</p>
+      </div>
+
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button id="tab-login" class="tab active">Log In</button>
+          <button id="tab-signup" class="tab">Sign Up</button>
+        </div>
+
+        <div class="auth-forms">
+          <form id="login-form" class="form active" autocomplete="on">
+            <label for="login-email">Email or phone</label>
+            <input id="login-email" name="email" type="text" required />
+
+            <label for="login-pass">Password</label>
+            <input id="login-pass" name="password" type="password" required />
+
+            <button type="submit" class="btn primary">Log In</button>
+            <a class="forgot" href="#">Forgotten password?</a>
+          </form>
+
+          <form id="signup-form" class="form" autocomplete="on">
+            <label for="first-name">First name</label>
+            <input id="first-name" name="firstName" type="text" required />
+
+            <label for="last-name">Surname</label>
+            <input id="last-name" name="lastName" type="text" required />
+
+            <label for="signup-email">Email or mobile number</label>
+            <input id="signup-email" name="email" type="email" required />
+
+            <label for="signup-pass">New password</label>
+            <input id="signup-pass" name="password" type="password" required minlength="6" />
+
+            <button type="submit" class="btn primary">Sign Up</button>
+            <p class="muted">By clicking Sign Up, you agree to our Terms and that you have read our Data Policy.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

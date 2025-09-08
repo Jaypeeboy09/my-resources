@@ -1,0 +1,35 @@
+*{
+    margin:0px;
+    padding:0px;
+    background-image: url(animegirl.jpg);
+    background-attachment: fixed;
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+    
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600px;
+}
+.loginform 
+{ 
+    border-radius: 10px;
+    padding: 10px;
+    background-color:rgb(108, 189, 139,)
+}
+.signupform
+{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: darkgrey;
+}
+h1{
+    text-align: center
+}
+a{
+    text-decoration: none;
+}
+.img-size{
+    height: fit-content;
+}
+
