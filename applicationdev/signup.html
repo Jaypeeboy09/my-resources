@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="signupForm">
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <input type="password" id="signupPassword" placeholder="confirm password" required>
+            <label style="font-size: 0.8rem; display: block; text-align: left;">
+            <input type="checkbox" id="togglePassword" required style="width: auto;"> Show Password
+            </label>
+            <button type="submit" id="signupBtn">
+                <span id="btnText">Sign Up</span>
+                <span id="spinner" class="spinner"></span>
+            </button>
+        </form>
+        <a href="login.html" class="secondary-link">Already have an account? Login</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
