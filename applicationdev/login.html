@@ -9,13 +9,13 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <p id="errorMessage" class="error-text"></p>
+        <p id="errorMessage" class="error-text" style="display:none;"></p>
         <form id="loginForm">
             <input type="email" id="loginEmail" placeholder="Email" required>
             <input type="password" id="loginPassword" placeholder="Password" required>
             <button type="submit" id="loginBtn">
                 <span id="btnText">Login</span>
-                <span id="spinner" class="spinner"></span>
+                <span id="spinner" class="spinner" style="display:none;"></span>
             </button>
         </form>
         <a href="signup.html" class="secondary-link">New user? Sign up here</a>
@@ -32,17 +32,34 @@
     errorMsg.style.display = 'none';
 
     setTimeout(() => {
-        const emailInput = document.getElementById('loginEmail').value;
+        const emailInput = document.getElementById('loginEmail').value.trim();
         const passInput = document.getElementById('loginPassword').value;
-        const savedData = JSON.parse(localStorage.getItem('registeredUser'));
+        let savedData = null;
 
-        if (savedData && emailInput === savedData.email && passInput === savedData.password) {
+        try {
+            savedData = JSON.parse(localStorage.getItem('registeredUser'));
+        } catch (err) {
+            // If parsing fails, treat as no user registered
+            savedData = null;
+        }
+
+        if (!savedData || !savedData.email || !savedData.password) {
+            // No registered user found
+            btn.disabled = false;
+            spinner.style.display = 'none';
+            errorMsg.textContent = "No registered user found. Please sign up first.";
+            errorMsg.style.display = 'block';
+            return;
+        }
+
+        // Compare email case-insensitively, password case-sensitively
+        if (emailInput.toLowerCase() === (savedData.email || '').toLowerCase() && passInput === savedData.password) {
             localStorage.setItem('isLoggedIn', 'true');
             window.location.href = 'dashboard.html';
         } else {
             btn.disabled = false;
             spinner.style.display = 'none';
-            errorMsg.textContent = "Invalid credentials.";
+            errorMsg.textContent = "Invalid email or password. Please try again.";
             errorMsg.style.display = 'block';
         }
     }, 1200);
